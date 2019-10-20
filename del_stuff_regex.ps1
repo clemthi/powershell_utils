@@ -13,9 +13,9 @@ else {
 
 foreach ($item in $itemList) {
     if ($testOnly) {
-        Remove-Item $obj.FullName -Recurse -Force -WhatIf
+        Remove-Item $item.FullName -Recurse -Force -WhatIf
     }else {
-        Remove-Item $obj.FullName -Recurse -Force
+        Remove-Item $item.FullName -Recurse -Force
     }
 }
 

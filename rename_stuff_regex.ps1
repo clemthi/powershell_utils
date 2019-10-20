@@ -17,9 +17,9 @@ foreach ($item in $itemList) {
     $itemPath = Split-Path -Path $item.FullName
     $newItemFullName = $itemPath + "\" + ($item.Name -Replace $replacePattern, $replacePatternBy)
     if ($testOnly) {
-        Rename-Item $file.FullName $newItemFullName -WhatIf
+        Rename-Item $item.FullName $newItemFullName -WhatIf
     }else {
-        Rename-Item $file.FullName $newItemFullName
+        Rename-Item $item.FullName $newItemFullName
     }
 }
 
